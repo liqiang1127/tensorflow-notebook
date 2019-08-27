@@ -17,6 +17,6 @@ gen
 .idea/tensorflow-notebook.iml
 .idea/vcs.xml
 py/4.opt/opt4_8/__pycache__/
-py/5.MNIST/__pycache__/
-py/5.MNIST/data/
-py/5.MNIST/model/
+py/5.mnist/__pycache__/
+py/5.mnist/data/
+py/5.mnist/model/
