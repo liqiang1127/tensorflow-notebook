@@ -1,0 +1,22 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# ignore
+.gitignore
+.idea/.gitignore
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/tensorflow-notebook.iml
+.idea/vcs.xml
+py/4.opt/opt4_8/__pycache__/
+py/5.MNIST/__pycache__/
+py/5.MNIST/data/
+py/5.MNIST/model/

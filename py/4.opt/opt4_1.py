@@ -8,11 +8,11 @@ STEPS = 20000
 
 rdm = np.random.RandomState(seed)
 X = rdm.rand(32,2)
-Y_ = [[x1 + x2 + (rdm.rand()/10 - 0.05)]for (x1,x2) in X]
+Y_ = [[x1 + x2 + (rdm.rand()/10 - 0.05)]for (x1, x2) in X]
 
-x = tf.placeholder(tf.float32,shape=(None,2))
-y_ = tf.placeholder(tf.float32,shape=(None,1))
-W1 = tf.Variable(tf.random_normal([2,1],stddev = 1,seed=1))
+x = tf.placeholder(tf.float32, shape=(None, 2))
+y_ = tf.placeholder(tf.float32, shape=(None, 1))
+W1 = tf.Variable(tf.random_normal([2, 1], stddev=1, seed=1))
 y = tf.matmul(x,W1)
 
 loss_mse = tf.reduce_mean(tf.square(y_ - y))

@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 
-BATCH_SIZE =30
+BATCH_SIZE = 30
 seed = 2
 STEPS = 40000
 
