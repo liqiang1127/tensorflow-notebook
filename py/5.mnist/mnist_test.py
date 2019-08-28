@@ -8,7 +8,7 @@ TEST_INTERVAL_SECS = 5
 
 
 def test(mnist):
-    with tf.Graph() as g:
+    with tf.Graph().as_default() as g:
         x = tf.placeholder(tf.float32, [None, mnist_forward.INPUT_NODE])
         y_ = tf.placeholder(tf.float32, [None, mnist_forward.OUTPUT_NODE])
         y = mnist_forward.forward(x, None)
@@ -26,7 +26,7 @@ def test(mnist):
                 if ckpt and ckpt.model_checkpoint_path:
                     saver.restore(sess, ckpt.model_checkpoint_path)
                     global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
-                    accuracy_score = sess.run(feed_dict={x: mnist.test.images, y_: mnist.test.labels})
+                    accuracy_score = sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels})
                     print("After %s training steps, test accuracy = %g" %(global_step, accuracy_score))
                 else:
                     print("No checkpoint file found")
