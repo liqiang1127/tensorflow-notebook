@@ -10,7 +10,7 @@ REGULARIZER = 0.0001
 # 共训练多少轮
 STEPS = 50000
 MOVING_AVERAGE_DECAY = 0.99
-MODEL_SAVE_PATH = ".\\model\\"
+MODEL_SAVE_PATH = "./model/"
 MODEL_NAME = "mnist_model"
 
 
@@ -59,7 +59,7 @@ def backward(mnist):
 
 
 def main():
-    mnist = input_data.read_data_sets(".\\data\\", one_hot=True)
+    mnist = input_data.read_data_sets("./data/", one_hot=True)
     backward(mnist)
 
 
