@@ -23,10 +23,10 @@ def load_image(path):
     ax0.imshow(img) 
 
     # 找到该图像的最短边
-    short_edge = min(img.shape[:2])
+    short_edge = int(min(img.shape[:2]))
     # 把图像的w和h分别减去最短边，并求平均
-    y = (img.shape[0] - short_edge) / 2  
-    x = (img.shape[1] - short_edge) / 2
+    y = int((img.shape[0] - short_edge) / 2)
+    x = int((img.shape[1] - short_edge) / 2)
     # 取出切分过的中心图像
     crop_img = img[y:y+short_edge, x:x+short_edge] 
 
